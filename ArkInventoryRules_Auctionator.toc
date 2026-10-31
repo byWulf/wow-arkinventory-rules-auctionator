@@ -1,0 +1,10 @@
+## Interface: 11509, 16001
+## Title: ArkInventory [Rules] Auctionator
+## Notes: Rule functions ahprice(), vendorunit() and ahflip() for ArkInventory using Auctionator prices
+## Author: byWulf
+## Version: 1.0
+## IconTexture: Interface\Icons\INV_Misc_Coin_01
+## RequiredDeps: ArkInventoryRules
+## OptionalDeps: Auctionator
+
+ArkInventoryRules_Auctionator.lua

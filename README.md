@@ -10,10 +10,9 @@ Typical use: an **"AH instead of vendor"** category for all items that sell for 
 
 | Version | Interface |
 |---|---|
-| WoW Classic Era | 11509 |
-| WoW Classic Forever | 16001 |
+| WoW Forever | 16001 |
 
-Other versions are untested. If ArkInventory and Auctionator provide the same APIs there, adding the interface number to the `.toc` is usually enough.
+Classic Era and other versions are not supported.
 
 ## Requirements
 
@@ -22,14 +21,16 @@ Other versions are untested. If ArkInventory and Auctionator provide the same AP
 
 ## Installation
 
-The folder in your AddOns directory **must** be named `ArkInventoryRules_Auctionator`, otherwise WoW will not load the addon:
+Install it from [CurseForge](https://www.curseforge.com/wow/addons/arkinventory-rules-auctionator), e.g. with the CurseForge app.
+
+For a manual installation, note that the folder in your AddOns directory **must** be named `ArkInventoryRules_Auctionator`, otherwise WoW will not load the addon:
 
 ```bash
-cd "C:/Program Files (x86)/World of Warcraft/_classic_era_/Interface/AddOns"
+cd "C:/Program Files (x86)/World of Warcraft/_forever_/Interface/AddOns"
 git clone https://github.com/byWulf/wow-arkinventory-rules-auctionator.git ArkInventoryRules_Auctionator
 ```
 
-For Forever, use `_forever_/Interface/AddOns` instead. Alternatively, download the repository as a ZIP and extract its contents to `Interface/AddOns/ArkInventoryRules_Auctionator/`.
+Alternatively, download the ZIP from the [releases](https://github.com/byWulf/wow-arkinventory-rules-auctionator/releases) and extract it into `Interface/AddOns`.
 
 Then `/reload` in game.
 
@@ -96,3 +97,7 @@ not soulbound() and ahprice() >= 10000 and vendorunit() > 0
 - **Refresh after scans.** ArkInventory caches rule results. The plugin clears this cache automatically whenever Auctionator has processed new prices (full scan or search).
 - **Items without a vendor price** (vendor price 0) match `ahflip()` as soon as their AH price reaches `mindiff`. Add `and vendorunit() > 0` if you don't want that.
 - Without Auctionator loaded, `ahprice()` always returns `0` and `ahflip()` never matches. No errors are raised.
+
+## License
+
+MIT, see [LICENSE](LICENSE).
